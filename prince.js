@@ -242,7 +242,7 @@ class ACIGanpatiExperience {
     }
 
     openPrinceModal() {
-        alert('💻 Prince Singh - Beginner \n\n🚀  Follow on Instagram: @prince_singh\n📧 Contact for projects & collaborations!');
+        alert('💻 Prince Singh - Beginner \n\n🚀  Follow on Instagram: @priince_.singh\n📧 Contact for projects & collaborations!');
     }
 }
 
@@ -279,4 +279,5 @@ function openPrinceModal() {
 let aciApp;
 document.addEventListener('DOMContentLoaded', () => {
     aciApp = new ACIGanpatiExperience();
+
 });
