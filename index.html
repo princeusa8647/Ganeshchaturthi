@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACI Ganpati Ultra Pro Max - Personalized Wishes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ganesh.css">
+</head>
+<body>
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <div class="app-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="institute-branding">
+                <div class="institute-logo">🎓</div>
+                <h1 class="institute-name">ACI COMPUTER INSTITUTE</h1>
+                <div class="auto-typing" id="autoTyping">
+                    <span id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <div class="contact-highlight">📞 9576737726 | 8540858926</div>
+            </div>
+        </div>
+
+        <!-- Animated Ganesh -->
+        <div class="ganesh-container">
+            <svg class="animated-ganesh" viewBox="0 0 300 350" id="animatedGanesh">
+                <defs>
+                    <linearGradient id="ganeshGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                        <stop offset="25%" style="stop-color:#FF6B35;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#DC143C;stop-opacity:1" />
+                        <stop offset="75%" style="stop-color:#6A0572;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="ganeshGlow">
+                        <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                        <feMerge> 
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                    <radialGradient id="auraGradient" cx="50%" cy="50%" r="60%">
+                        <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.3" />
+                        <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0.1" />
+                    </radialGradient>
+                </defs>
+                
+                <!-- Divine Aura -->
+                <circle cx="150" cy="175" r="145" fill="url(#auraGradient)" filter="url(#ganeshGlow)">
+                    <animate attributeName="r" values="145;155;145" dur="4s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="4s" repeatCount="indefinite"/>
+                </circle>
+                
+                <!-- Ganesh Body -->
+                <ellipse cx="150" cy="260" rx="85" ry="75" fill="url(#ganeshGradient)" filter="url(#ganeshGlow)"/>
+                
+                <!-- Ganesh Head -->
+                <circle cx="150" cy="140" r="70" fill="url(#ganeshGradient)" filter="url(#ganeshGlow)"/>
+                
+                <!-- Ears with Animation -->
+                <ellipse cx="90" cy="120" rx="32" ry="42" fill="url(#ganeshGradient)" transform="rotate(-30 90 120)" filter="url(#ganeshGlow)">
+                    <animateTransform attributeName="transform" type="rotate" values="-30 90 120;-25 90 120;-30 90 120" dur="6s" repeatCount="indefinite"/>
+                </ellipse>
+                <ellipse cx="210" cy="120" rx="32" ry="42" fill="url(#ganeshGradient)" transform="rotate(30 210 120)" filter="url(#ganeshGlow)">
+                    <animateTransform attributeName="transform" type="rotate" values="30 210 120;25 210 120;30 210 120" dur="6s" repeatCount="indefinite"/>
+                </ellipse>
+                
+                <!-- Eyes with Blink Animation -->
+                <circle cx="125" cy="125" r="12" fill="white"/>
+                <circle cx="175" cy="125" r="12" fill="white"/>
+                <circle cx="125" cy="125" r="6" fill="black">
+                    <animate attributeName="ry" values="6;0.5;6" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="175" cy="125" r="6" fill="black">
+                    <animate attributeName="ry" values="6;0.5;6" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="127" cy="123" r="3" fill="white"/>
+                <circle cx="177" cy="123" r="3" fill="white"/>
+                
+                <!-- Animated Trunk -->
+                <path d="M150 155 Q130 180 140 210 Q160 225 150 250" stroke="url(#ganeshGradient)" stroke-width="18" fill="none" stroke-linecap="round" filter="url(#ganeshGlow)">
+                    <animate attributeName="d" values="M150 155 Q130 180 140 210 Q160 225 150 250;M150 155 Q135 185 145 215 Q155 230 145 255;M150 155 Q130 180 140 210 Q160 225 150 250" dur="8s" repeatCount="indefinite"/>
+                </path>
+                
+                <!-- Crown with Sparkle -->
+                <path d="M95 85 Q150 50 205 85 Q200 80 195 85 Q190 80 185 85 Q180 80 175 85 Q170 80 165 85 Q160 80 155 85 Q150 80 145 85 Q140 80 135 85 Q130 80 125 85 Q120 80 115 85 Q110 80 105 85 Q100 80 95 85" fill="#FFD700" filter="url(#ganeshGlow)"/>
+                
+                <!-- Crown Jewels with Sparkle -->
+                <circle cx="150" cy="70" r="10" fill="#DC143C">
+                    <animate attributeName="r" values="10;12;10" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="125" cy="78" r="6" fill="#27AE60">
+                    <animate attributeName="r" values="6;8;6" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="175" cy="78" r="6" fill="#3498DB">
+                    <animate attributeName="r" values="6;8;6" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                
+                <!-- Arms -->
+                <ellipse cx="75" cy="200" rx="20" ry="38" fill="url(#ganeshGradient)" transform="rotate(-40 75 200)" filter="url(#ganeshGlow)"/>
+                <ellipse cx="225" cy="200" rx="20" ry="38" fill="url(#ganeshGradient)" transform="rotate(40 225 200)" filter="url(#ganeshGlow)"/>
+                
+                <!-- Sacred Symbols on Body -->
+                <circle cx="150" cy="180" r="8" fill="#FFD700">
+                    <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="130" cy="195" r="5" fill="#FFD700">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="170" cy="195" r="5" fill="#FFD700">
+                    <animate attributeName="opacity" values="1;0.5;1" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                
+                <!-- Lotus Base with Animation -->
+                <ellipse cx="150" cy="335" rx="90" ry="25" fill="#FF69B4" opacity="0.8">
+                    <animate attributeName="rx" values="90;95;90" dur="4s" repeatCount="indefinite"/>
+                </ellipse>
+                <path d="M60 335 Q90 320 120 335 Q150 320 180 335 Q210 320 240 335" stroke="#FF1493" stroke-width="4" fill="none">
+                    <animate attributeName="d" values="M60 335 Q90 320 120 335 Q150 320 180 335 Q210 320 240 335;M60 335 Q90 315 120 335 Q150 315 180 335 Q210 315 240 335;M60 335 Q90 320 120 335 Q150 320 180 335 Q210 320 240 335" dur="5s" repeatCount="indefinite"/>
+                </path>
+                
+                <!-- Sacred Om with Glow -->
+                <text x="150" y="45" text-anchor="middle" font-size="24" fill="#FFD700" font-weight="bold" filter="url(#ganeshGlow)">ॐ
+                    <animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"/>
+                </text>
+            </svg>
+        </div>
+
+        <!-- Wish Generator -->
+        <div class="wish-generator">
+            <h2 class="generator-title">🎉 व्यक्तिगत  गणेश चतुर्थी शुभकामनाएँ बनाए </h2>
+            
+            <div class="input-group">
+                <label class="input-label">आपका नाम:</label>
+                <input type="text" class="premium-input" id="userName" placeholder="अपना नाम लिखें" maxlength="30">
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label">किसके लिए शुभकामनाएँ:</label>
+                <input type="text" class="premium-input" id="relationName" placeholder="जैसे: mother, father, brother" maxlength="20">
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label">शुभकामना का टोन चुनें:</label>
+                <div class="tone-selector">
+                    <button class="tone-btn active" data-tone="formal">🙏 औपचारिक</button>
+                    <button class="tone-btn" data-tone="emotional">❤️ भावनात्मक</button>
+                    <button class="tone-btn" data-tone="funny">😄 मजेदार</button>
+                </div>
+            </div>
+            
+            <button class="generate-btn" id="generateBtn" onclick="generatePersonalizedWish()">
+                ✨ शुभकामना बनाएं
+            </button>
+        </div>
+
+        <!-- Generated Wish Display -->
+        <div class="wish-display" id="wishDisplay">
+            <div class="wish-text" id="wishText"></div>
+            <div class="wish-actions">
+                <button class="action-btn btn-whatsapp" onclick="shareToWhatsApp()">📱 WhatsApp शेयर</button>
+                <button class="action-btn btn-download" onclick="downloadWishCard()">📸 डाउनलोड</button>
+                <button class="action-btn btn-regenerate" onclick="regenerateWish()">🔄 नई शुभकामनाएँ</button>
+            </div>
+        </div>
+
+        <!-- Lead Capture -->
+        <div class="lead-capture">
+            <h2 class="offer-title">🎊 गणेश चतुर्थी स्पेशल ऑफर!</h2>
+            <p class="offer-subtitle">किसी भी कोर्स में 10% तक की छूट</p>
+            
+            <form class="lead-form" id="leadForm" onsubmit="submitLead(event)">
+                <input type="text" class="lead-input" name="name" placeholder="आपका नाम" required>
+                <input type="tel" class="lead-input" name="mobile" placeholder="मोबाइल नंबर" required pattern="[0-9]{10}">
+                <select class="course-select" name="course" required>
+                    <option value="">कोर्स चुनें</option>
+                    <option value="ADCA">ADCA - Advanced Diploma</option>
+                    <option value="DCA">DCA - Diploma in Computer Application</option>
+                    <option value="Tally">Tally Prime with GST</option>
+                    <option value="DFA">DFA - Diploma in Financial Accounting</option>
+                    <option value="CCA">CCA - Certificate in Computer Application</option>
+                    <option value="Programming">Programming (Python/Java)</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                </select>
+                <button type="submit" class="submit-btn">🎁 ऑफर क्लेम करें</button>
+            </form>
+        </div>
+
+        <!-- Institute Details -->
+        <div class="institute-details">
+            <h2 style="color: var(--aci-purple); font-size: 2.2rem; font-weight: 800; margin-bottom: 30px; font-family: 'Noto Sans Devanagari', sans-serif;">
+                🏆 ACI Computer Institute - तकनीकी शिक्षा का अग्रणी केंद्र
+            </h2>
+            
+            <div class="courses-grid">
+                <div class="course-card">💻 ADCA<br><small>Advanced Diploma</small></div>
+                <div class="course-card">🖥️ DCA<br><small>Computer Application</small></div>
+                <div class="course-card">📊 Tally Prime<br><small>with GST</small></div>
+                <div class="course-card">💰 DFA<br><small>Financial Accounting</small></div>
+                <div class="course-card">📜 CCA<br><small>Certificate Course</small></div>
+                <div class="course-card">🐍 Programming<br><small>Python/Java</small></div>
+                <div class="course-card">🌐 Web Development<br><small>Full Stack</small></div>
+                <div class="course-card">📱 Digital Marketing<br><small>Social Media</small></div>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 1.2rem; color: var(--aci-purple); font-weight: 600; font-family: 'Noto Sans Devanagari', sans-serif;">
+                📍 Maker, Chhapra Road (Bypass), Saran, Bihar<br>
+                🏢 आधुनिक कंप्यूटर लैब | अनुभवी शिक्षक | 100% जॉब असिस्टेंस<br>
+                📞 <strong style="color: var(--aci-red);">9576737726 | 8540858926</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prince Singh Credit - Ultra Highlighted -->
+    <div class="prince-credit" onclick="openPrinceModal()">
+        <div class="prince-name">💻 Prince Singh</div>
+        <a href="https://instagram.com/priince_.singh" target="_blank" class="prince-instagram">📸 @prince_singh</a>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <h2 class="modal-title">🎉 धन्यवाद!</h2>
+            <p class="modal-text">आपका फॉर्म सफलतापूर्वक सबमिट हो गया है।<br>हमारी टीम जल्द ही आपसे संपर्क करेगी।</p>
+            <button class="close-modal" onclick="closeModal()">बंद करें</button>
+        </div>
+    </div>
+
+    <script src="prince.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9752d97d91a7e8e0',t:'MTc1NjIwNjI3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
